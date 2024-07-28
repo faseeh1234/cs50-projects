@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Tracker
+{% endblock %}
+
+{% block main %}
+<form method="GET" action="/index">
+    <div class="row">
+    <div class="column">
+        <button><a href="/legs">Legs</a></button>
+        <br>
+        <button><a href="/shoulders">Shoulders</a></button>
+    </div>
+    <div class="column">
+        <button><a href="/biceps">Biceps</a></button>
+        <br>
+        <button><a href="/chest">Chest</a></button>
+    </div>
+    <div class="column">
+        <button><a href="/back">Back</a></button>
+        <br>
+        <button><a href="/abs">Abs</a></button>
+    </div>
+    </div>
+
+    <h4> Progress </h4>
+    <p><span style="color: {% if legs == 100 %} green {% else %} red {% endif %}">Legs: {{legs}} %</span></p>
+    <p><span style="color: {% if shoulders == 100 %} green {% else %} red {% endif %}">Shoulders: {{shoulders}} %</span></p>
+    <p><span style="color: {% if biceps == 100 %} green {% else %} red {% endif %}">Biceps: {{biceps}} %</span></p>
+    <p><span style="color: {% if abs == 100 %} green {% else %} red {% endif %}">ABS: {{abs}} %</span></p>
+    <p><span style="color: {% if chest == 100 %} green {% else %} red {% endif %}">Chest: {{chest}} %</span></p>
+    <p><span style="color: {% if back == 100 %} green {% else %} red {% endif %}">Back: {{back}} %</span></p>
+</form>
+{% endblock %}

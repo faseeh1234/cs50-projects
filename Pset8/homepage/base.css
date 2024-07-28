@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 75%;
+    margin: auto;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+    margin-bottom: 3vh;
+}
+
+
+/* Footer */
+footer {
+    display: flex;
+    border: 1px solid black;
+    padding: 15px;
+}
+
+#copyright {
+    text-align: right;
+    flex: auto;
+}
+
+
+nav {
+    width: 50%;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+}

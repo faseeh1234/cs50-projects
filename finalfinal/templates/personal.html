@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block title %}
+    Personal Details
+{% endblock %}
+
+
+{% block main %}
+    <form action="/personal" method="POST">
+        <div class="form-group">
+            <select name="gender">
+                <option disabled="" selected="">Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="nonbinary">Nonbinary</option>
+                <option value="noanswer">I prefer not to answe</option>
+            </select>
+            <input autocomplete="off" style="text-align: center;" autofocus class="form-control mx-auto w-auto" id="height" name="height" placeholder="Height (cm)" type="number">
+            <input autocomplete="off" style="text-align: center;" autofocus class="form-control mx-auto w-auto" id="weight" name="weight" placeholder="Weight (kg)" type="number">
+        </div>
+        <button class="btn btn-primary" type="submit">Sell</button>
+
+    </form>
+{% endblock %}

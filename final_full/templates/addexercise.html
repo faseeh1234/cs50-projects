@@ -1,0 +1,19 @@
+{% block title %}
+    Add exercise
+{% endblock %}
+
+
+{% block main %}
+    <form action="/addexercise" method="POST">
+        <div class="form-group">
+            <select name="musclegroup">
+                <option disabled="" selected="">Musclegroup</option>
+                {% for musclegroup in musclegroups %}
+                    <option value="{{ musclegroup }}">{{ musclegroup }}</option>
+                {% endfor %}
+            </select>
+            <input class="form-control" name="newexercise" placeholder="Add a new exercise" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Add</button>
+    </form>
+{% endblock %}

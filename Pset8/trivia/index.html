@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function() {
+
+                // get the correct button
+                let correct = document.querySelector('.correct');
+                // for the button that is correct
+
+                // add an event listener that
+                correct.addEventListener('click', function() {
+                    // sets background to green
+                    correct.style.backgroundColor = 'green';
+                    // sets text to 'Correct'
+
+                    document.getElementById('check1').innerHTML = 'Correct';
+                })
+
+                // get the incorrect buttons
+                let incorrects = document.querySelectorAll('.incorrect');
+                // for each button that is incorrect
+                for (let i = 0; i < incorrects.length; i++) {
+                    // add an event listener that
+                    incorrects[i].addEventListener('click', function() {
+                        // sets background to red
+                        incorrects[i].style.backgroundColor = 'Red';
+                        // sets text to 'Incorrect'
+                        document.getElementById('check1').innerHTML = 'Incorrect';
+                    })
+                }
+
+                document.querySelector('#freecheck').addEventListener('click', function() {
+                    console.log("hi")
+                    let input = document.querySelector('#textbox');
+                    if (input.value == 1984) {
+                        input.style.backgroundColor = 'Green';
+                        document.getElementById('check2').innerHTML = 'Correct';
+                    } else {
+                        input.style.backgroundColor = 'Red';
+                        document.getElementById('check2').innerHTML = 'Incorrect';
+                    }
+                })
+            })
+        </script>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <!-- TODO: Add multiple choice question here -->
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>Which of these popular shows is the highest rated TV show on IMDB? </h3>
+                <button class="incorrect">Game of Thrones</button>
+                <button class="correct">Breaking Bad</button>
+                <button class="incorrect">Friends</button>
+                <button class="incorrect">Stranger Things</button>
+                <p id="check1"></p>
+            </div>
+
+            <!-- TODO: Add free response question here -->
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>What year appears in a George Orwell novel?</h3>
+                <input id="textbox" type="text">
+                <button id="freecheck">Check Answer</button>
+                <p id="check2"></p>
+            </div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css">
+        <link href="sir-model.css" rel="stylesheet">
+        <link href="/base.css" rel="stylesheet">
+        <script src="sir-model.js"></script>
+        <title>SIR Model</title>
+    </head>
+    <body>
+        <header>
+            <h1>SIR Model</h1>
+        </header>
+        <main>
+            <info>
+            <p>An SIR model is a simple mathematical model used to simulate the spread of diseses amongst a population. Susceptible (S) repersents the population that has not yet been infected and as such is vulnerable to becoming infected. Infected (I) is the section of the population currently infected with the disease. Infected indivisuals have a chance to infect other susceptible people depending on the disease infection rate. Recovered (R) is the section of population that has recovered from the disease and developed immunity as such they can no longer infect or be infected by other people.</p>
+
+            <p><b>Total Population</b>: the total population at the beginning of the simulation. The sum of susceptible, infected and recovered people will always equal this number.</p>
+            <p><b>Infected Start</b>: the starting population of infected indivisuals at the beginning of the simulation.</p>
+            <p><b>Infectious Rate</b>: the rate at which infected indivisuals spread the disease to those susceptible each day.</p>
+            <p><b>Recovery Rate</b>: the rate at which infected indivisuals recover from the disease each day.</p>
+            </info>
+            <div id="input-section-wrapper">
+                <p id="input-section1" class="math-font">
+                    N = <input type="number" id="total-pop" name="total-pop" min="1" max="1000" value="1000">
+                    <i class="comment">// total population size</i>   <br>
+
+                    I(0) = <input type="number" id="Istart" name="Istart" min="1" max="1000" value="5">
+                    <i class="comment"> // infected start</i>  <br>
+
+                    S(0) = N - I(0) <br>
+                    R(0) = 0
+                </p>
+
+                <div id="input-section2">
+                    <p>
+                        <input type="range" id="i-slider" name="i-slider" min="0" max="5" step="0.01" value="0.66"> <label id="i-slider-label" class="math-font">0.00</label> <br>
+                        <label>Infectious Rate (between 0 and 5):</label>
+                    </p>
+
+                    <p>
+                        <input type="range" id="r-slider" name="r-slider" min="0" max="1" step="0.01" value="0.66"> <label id="r-slider-label" class="math-font">0.00</label> <br>
+                        <label>Recovery Rate (between 0 and 1):</label>
+                    </p>
+                </div>
+            </div>
+            <div id="tableflex">
+                <table id="output-table">
+                    <tr class="math-font">
+                        <th>Time</th>
+                        <th>S(t)</th>
+                        <th>I(t)</th>
+                        <th>R(t)</th>
+                    </tr>
+                </table>
+                <div class="flexpad"></div>
+            </div>
+        </main>
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/todo/todo-list.html">Todo List</a></li>
+                    <li><a href="/stopwatch/stopwatch.html">Stopwatch</a></li>
+                </ul>
+            </nav>
+            <div id="copyright">
+                Copyright &copy; 2023 Muhammad Faseeh Jawed
+            </div>
+        </footer>
+    </body>
+</html>

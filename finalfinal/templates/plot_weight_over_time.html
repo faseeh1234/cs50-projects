@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block title %}
+    Plot data overtime
+{% endblock %}
+
+{% block main %}
+    <form action="/plot_weight_over_time" method="POST">
+        <div class="form-group">
+            <select name="exercise">
+                <option disabled="" selected="">Exercises</option>
+                {% for exercise in exercise_list %}
+                    <option value="{{ exercise }}">{{ exercise }}</option>
+                {% endfor %}
+            </select>
+
+        </div>
+        <button class="btn btn-primary" type="submit">See the progress</button>
+        <br>
+        <img src="/static/weight_over_time.png" alt="Weight over time" width=60% height="70%" class="CENy8b" role="img">
+
+    </form>
+{% endblock %}

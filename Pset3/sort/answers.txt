@@ -1,0 +1,28 @@
+sort1 uses: bubble
+
+How do you know?: The runtime for random (worst case) is much higher than that of a sorted file (best case), which fits the critera for a bubble sort
+mechanism.
+
+sort2 uses: merge
+
+How do you know?: Merge has the fastest runtime that is also has the same best case (sorted) and worst case (random). Hence, it satisfies the criteria for
+a merge sort which is faster overtime. 
+
+sort3 uses: selection
+
+How do you know?: All 3 runtimes are very similar, which is what the best case (sorted) and worst case (random) demonstrate. This is a property of
+a selection sorting mechanism
+
+
+ random 50000 - 0m5.587s
+ reversed 50000 - 0m4.696s
+ sorted50000 - 0m0.246s
+
+
+ random 50000 - 0m0.455s
+ reversed 50000 - 0m0.558s
+ sorted 50000 - 0m0.244s
+
+ random 50000 - 0m2.240s
+ reversed 50000 - 0m2.292s
+ sorted 50000 - 0m2.089s

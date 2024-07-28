@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Update Info
+{% endblock %}
+
+{% block main %}
+<form action="/updateinfo"  method =  "POST">
+    <div class="form-group">
+        <input class="form-control" name="newweight" placeholder="Update weight" type="text">
+        <button class="btn btn-primary" type="submit">Update</button>
+    </div>
+</form>
+{% endblock %}

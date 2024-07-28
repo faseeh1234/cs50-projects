@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<form action="/history"  method = "GET">
+    <div class="mb-3">
+        <table>
+            <tr>
+                <th>Exercise</th>
+                <th>Muscle group</th>
+                <th>Weight</th>
+                <th>Reps</th>
+                <th>Date</th>
+            </tr>
+            {% for entry in history %}
+            <tr>
+                <td>{{ entry.exercise }}</td>
+                <td>{{entry.musclegroup}}</td>
+                <td>{{ entry.weight }}</td>
+                <td>{{ entry.reps }}</td>
+                <td>{{ entry.date}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</form>
+{% endblock %}

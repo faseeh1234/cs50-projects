@@ -1,0 +1,28 @@
+HTML tags:
+<p>
+<div>
+<table>
+<footer>
+<nav>
+<ul>
+<li>
+<footer>
+<th>
+<tr>
+<main>
+<h4>
+<button>
+
+CSS:
+
+width: 100%;
+text-align: center;
+border: 1px solid black;
+margin-bottom: 3vh;
+justify-content: space-between;
+align-items: center;
+padding: 30px;
+
+Boostrap & Javascript used to style some buttons and tables, particularly the table for the SIR model and its changing
+dynamics with changing inputs. 
+

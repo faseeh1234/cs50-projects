@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Biceps
+{% endblock %}
+
+
+{% block main %}
+    <form action="/biceps" method="POST">
+        <div class="form-group">
+            <select name="exercise">
+                <option disabled="" selected="">Exercise</option>
+                {% for exercise in exercises %}
+                    <option value="{{ exercise }}">{{ exercise }}</option>
+                {% endfor %}
+            </select>
+            <input class="form-control" name="weight"  placeholder="Used weight" type="text">
+            <input class="form-control" name="reps" placeholder="Repetitions done" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Add</button>
+        <p>If the exercise is not added, you can add it below</p>
+
+    <button><a href="/addexercise">Add exercise</a></button>
+    </form>
+{% endblock %}
+
+
+

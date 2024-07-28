@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Let's buy a stock!
+{% endblock %}
+
+{% block main %}
+    <form action="/buy" method="post">
+        <div class="form-group mb-5">
+            <label for="symbol" style="float: left;">Symbol</label>
+            <input autocomplete="off" autofocus class="form-control" id="symbol" name="symbol" placeholder="Stock Symbol" type="text">
+        </div>
+        <div class="form-group mb-5">
+            <label for="shares" style="float: left;">Number of Shares</label>
+            <input autocomplete="off" class="form-control" min="1" name="shares" placeholder="Number of Shares" type="number">
+        </div>
+        <button class="btn btn-primary form-control mx-auto" type="submit">Buy</button>
+    </form>
+{% endblock %}

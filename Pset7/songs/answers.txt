@@ -1,0 +1,5 @@
+Spotify could look at the most regularly heard artists, the duration of playtime as well as the genre of music most listened by the listeners.
+The aura could be calculated by weighing each of the possible fields using a numeric formula, and calculating the aura from another set of values.
+
+This may not be fully representative as it may be manipulated by one or more songs that are an anomaly and not representative of the listener's style.
+

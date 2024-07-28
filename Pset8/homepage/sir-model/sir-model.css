@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 75%;
+    margin: auto;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+    margin-bottom: 3vh;
+}
+
+
+/* Input Section */
+
+#input-section-wrapper {
+    display: flex;
+}
+
+#input-section1 {
+    width: 50%;
+}
+#input-section2 {
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+button#run-simulation {
+    width: 50%;
+}
+
+.math-font {
+    font-family: "Computer Modern Serif", courier, sans-serif;
+    font-size: large;
+    line-height: 2;
+}
+
+#total-pop, #Istart {
+    line-height: 1;
+}
+
+.comment {
+    font-family: courier, sans-serif;
+}
+
+
+/* Result Table */
+table#output-table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+table#output-table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+#tableflex {
+    display: flex;
+    padding-bottom: 50vh;;
+}
+
+

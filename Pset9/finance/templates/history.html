@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col" class="text-start">Symbol</th>
+                <th scope="col" class="text-end">Shares</th>
+                <th scope="col" class="text-end">Price</th>
+                <th scope="col" class="text-end">Action</th>
+                <th scope="col" class="text-end">Transacted</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in transactions %}
+                <tr scope="row">
+                    <td class="text-start">{{ transaction["stock_id"] }}</td>
+                    <td class="text-end">{{ transaction["quantity"]}}</td>
+                    <td class="text-end">{{ transaction["price"] | usd}}</td>
+                    <td class="text-end">{{ transaction["action"]}}</td>
+                    <td class="text-end">{{ transaction["time"]}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+{% endblock %}

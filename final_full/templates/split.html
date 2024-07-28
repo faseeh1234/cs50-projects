@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Split
+{% endblock %}
+
+{% block main %}
+<form action="/split"  method =  "POST">
+<div>
+    <input class="form-control" name="shoulders" placeholder="How many shoulder exercises do you want to do" type="text">
+    <input class="form-control" name="biceps" placeholder="How many biceps exercises do you want to do" type="text">
+    <input class="form-control" name="legs" placeholder="How many legs exercises do you want to do" type="text">
+    <input class="form-control" name="chest" placeholder="How many chest exercises do you want to do" type="text">
+    <input class="form-control" name="back" placeholder="How many back exercises do you want to do" type="text">
+    <input class="form-control" name="abs" placeholder="How many abs exercises do you want to do" type="text">
+</div>
+<button class="btn btn-primary" type="submit">Submit</button>
+</form>
+{% endblock %}

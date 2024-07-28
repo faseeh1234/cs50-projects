@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <div style="margin: 20px; font-size: 2em; padding: 10%;">
+        <p><strong>Name:</strong> {{ symbol.name }}</p>
+        <p><strong>Price:</strong> {{ symbol.price | usd}}</p>
+    </div>
+{% endblock %}

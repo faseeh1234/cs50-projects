@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Let's sell a stock!
+{% endblock %}
+
+{% block main %}
+    <form action="/sell" method="post">
+        <div class="form-group mb-5">
+            <label for="symbol" style="float: left;">Symbol</label>
+            <select class="form-control mx-auto" id="symbol" name="symbol">
+                <option selected disabled>Share</option>
+                {% for share in portfolio %}
+                    <option value="{{ share['stock_id'] }}">{{ share['stock_id'] }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group mb-5">
+            <label for="Number of Shares" style="float: left;">Number of Shares</label>
+            <input autocomplete="off" class="form-control" min="1" name="shares" placeholder="Number of Shares" type="number">
+        </div>
+        <button class="btn btn-primary form-control mx-auto" type="submit">Sell</button>
+    </form>
+{% endblock %}
